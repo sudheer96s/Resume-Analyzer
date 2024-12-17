@@ -1,0 +1,6 @@
+streamlit
+scikit-learn
+pdfminer.six
+python-docx
+spacy
+en-core-web-sm
