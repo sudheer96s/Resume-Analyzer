@@ -73,7 +73,7 @@ def main():
 
                 report = f"""Resume Analysis Report\n\nSimilarity Score: {analysis['similarity_score'] * 100:.2f}%\n\nExtracted Keywords:\n{', '.join(analysis['keywords'])}\n\nMissing Keywords:\n{', '.join(analysis['missing_keywords'])}\n"""
                 st.download_button(
-                    label="Download Report as Text",
+                    label="Download Report",
                     data=report.encode("utf-8"),
                     file_name="resume_analysis_report.txt",
                     mime="text/plain"
