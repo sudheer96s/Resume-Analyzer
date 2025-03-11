@@ -71,14 +71,14 @@ def main():
                 st.write("Missing Keywords from Job Description")
                 st.write(", ".join(analysis["missing_keywords"]))
 
-                if st.button("Download Report"):
-                    report = f"""Resume Analysis Report\n\nSimilarity Score: {analysis['similarity_score'] * 100:.2f}%\n\nExtracted Keywords:\n{', '.join(analysis['keywords'])}\n\nMissing Keywords:\n{', '.join(analysis['missing_keywords'])}\n"""
-                    st.download_button(
-                        label="Download Report as Text",
-                        data=report.encode("utf-8"),
-                        file_name="resume_analysis_report.txt",
-                        mime="text/plain"
-                    )
+                report = f"""Resume Analysis Report\n\nSimilarity Score: {analysis['similarity_score'] * 100:.2f}%\n\nExtracted Keywords:\n{', '.join(analysis['keywords'])}\n\nMissing Keywords:\n{', '.join(analysis['missing_keywords'])}\n"""
+                st.download_button(
+                    label="Download Report as Text",
+                    data=report.encode("utf-8"),
+                    file_name="resume_analysis_report.txt",
+                    mime="text/plain"
+                )
+
 
         else:
             st.error("Please upload a resume and provide a job description.")
